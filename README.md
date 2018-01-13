@@ -24,4 +24,4 @@ func main() {
 }
 ```
 
-<img src="2.svg" alt="Smiley face" height="200" width="200">
+<img src="examples/2.svg" alt="Smiley face" height="200" width="200">
