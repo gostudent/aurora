@@ -11,11 +11,11 @@
 </defs>
 <rect x="0" y="0" width="1600" height="1200" style="fill: url(#bb)"/>
 <g style="font-size:72px;fill:white;text-anchor:middle">
-<text x="800" y="510" >&#34;It is better to</text>
-<text x="800" y="582" >be hated for what</text>
-<text x="800" y="654" >you are than to</text>
-<text x="800" y="726" >loved for what</text>
-<text x="800" y="798" >you are not.&#34;</text>
+<text x="800" y="450" >&#34;It is better to</text>
+<text x="800" y="525" >be hated for what</text>
+<text x="800" y="600" >you are than to</text>
+<text x="800" y="675" >loved for what</text>
+<text x="800" y="750" >what you are not.&#34;</text>
 </g>
-<text x="800" y="900" style="text-anchor:middle;font-size:54px;fill:white;font-style:italic;">André Gide</text>
+<text x="800" y="825" style="text-anchor:middle;font-size:54px;fill:white;font-style:italic;">André Gide</text>
 </svg>
