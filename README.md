@@ -16,11 +16,10 @@ import (
 )
 
 func main() {
-	quote := []string{"It is better to", "be hated for what", "you are than to",
-		"loved for what", "you are not."}
-	author := "André Gide"
-	filename := "something"
-	aurora.Create(filename, quote, author)
+	quote := []string{"Be yourself", "everyone else is", "already taken."}
+	author := "Oscar Wilde"
+	filename := "1"
+	aurora.CreatePort(filename, quote, author)
 }
 ```
 
