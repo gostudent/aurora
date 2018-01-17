@@ -12,11 +12,13 @@ var (
 	err     error
 )
 
+//New data type for gradient createdd
 type gradient struct {
 	color1 svg.Offcolor
 	color2 svg.Offcolor
 }
 
+//An array for all the gradients created.
 var gradients = []gradient{
 	{svg.Offcolor{0, "#fcdf8a", 1.0}, svg.Offcolor{100, "#F38381", 1.0}},
 	{svg.Offcolor{0, "#f54ea2", 1.0}, svg.Offcolor{100, "#FF7676", 1.0}},
@@ -50,7 +52,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreateSquare(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Setting default gradient if no gradient selected or else selecting the desired gradient.
 	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
@@ -110,7 +112,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreateLand(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Setting default gradient if no gradient selected or else selecting the desired gradient.
 	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
@@ -169,7 +171,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreatePort(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Setting default gradient if no gradient selected or else selecting the desired gradient.
 	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
