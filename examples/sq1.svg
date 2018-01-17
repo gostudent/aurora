@@ -11,11 +11,9 @@
 </defs>
 <rect x="0" y="0" width="1000" height="1000" style="fill: url(#bb)"/>
 <g style="font-size:72px;fill:white;text-anchor:middle">
-<text x="500" y="410" >&#34;It is better to</text>
-<text x="500" y="482" >be hated for what</text>
-<text x="500" y="554" >you are than to</text>
-<text x="500" y="626" >loved for what</text>
-<text x="500" y="698" >you are not.&#34;</text>
+<text x="500" y="425" >&#34;Be yourself</text>
+<text x="500" y="500" >everyone else is</text>
+<text x="500" y="575" >already taken.&#34;</text>
 </g>
-<text x="500" y="800" style="text-anchor:middle;font-size:54px;fill:white;font-style:italic;">André Gide</text>
+<text x="500" y="650" style="text-anchor:middle;font-size:54px;fill:white;font-style:italic;">Oscar Wilde</text>
 </svg>
