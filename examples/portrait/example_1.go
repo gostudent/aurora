@@ -8,5 +8,5 @@ func main() {
 	quote := []string{"Be yourself", "everyone else is", "already taken."}
 	author := "Oscar Wilde"
 	filename := "1"
-	aurora.CreatePort(filename, quote, author)
+	aurora.CreatePort(filename, quote, author, 20)
 }

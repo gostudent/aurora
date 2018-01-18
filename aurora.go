@@ -12,18 +12,51 @@ var (
 	err     error
 )
 
-/*
-CreateSquare generates a square SVG image.
+type gradient struct {
+	color1 svg.Offcolor
+	color2 svg.Offcolor
+}
+
+var Gradients = []gradient{
+	{svg.Offcolor{0, "#fcdf8a", 1.0}, svg.Offcolor{100, "#F38381", 1.0}},
+	{svg.Offcolor{0, "#f54ea2", 1.0}, svg.Offcolor{100, "#FF7676", 1.0}},
+	{svg.Offcolor{0, "#17ead9", 1.0}, svg.Offcolor{100, "#6078EA", 1.0}},
+	{svg.Offcolor{0, "#622774", 1.0}, svg.Offcolor{100, "#C53364", 1.0}},
+	{svg.Offcolor{0, "#7117ea", 1.0}, svg.Offcolor{100, "#EA6060", 1.0}},
+	{svg.Offcolor{0, "#42e695", 1.0}, svg.Offcolor{100, "#3BB2B8", 1.0}},
+	{svg.Offcolor{0, "#f02fc2", 1.0}, svg.Offcolor{100, "#6094ea", 1.0}},
+	{svg.Offcolor{0, "#65799b", 1.0}, svg.Offcolor{100, "#5e2563", 1.0}},
+	{svg.Offcolor{0, "#184e68", 1.0}, svg.Offcolor{100, "#57ca85", 1.0}},
+	{svg.Offcolor{0, "#5b247a", 1.0}, svg.Offcolor{100, "#1bcedf", 1.0}},
+	{svg.Offcolor{0, "#fad961", 1.0}, svg.Offcolor{100, "#f76b1c", 1.0}},
+	{svg.Offcolor{0, "#f2d50f", 1.0}, svg.Offcolor{100, "#da0641", 1.0}},
+	{svg.Offcolor{0, "#F5515F", 1.0}, svg.Offcolor{100, "#A1051D", 1.0}},
+	{svg.Offcolor{0, "#F36265", 1.0}, svg.Offcolor{100, "#961276", 1.0}},
+	{svg.Offcolor{0, "#FF57B9", 1.0}, svg.Offcolor{100, "#A704FD", 1.0}},
+	{svg.Offcolor{0, "#C56CD6", 1.0}, svg.Offcolor{100, "#3425AF", 1.0}},
+	{svg.Offcolor{0, "#13f1fc", 1.0}, svg.Offcolor{100, "#0470dc", 1.0}},
+	{svg.Offcolor{0, "#0FF0B3", 1.0}, svg.Offcolor{100, "#036ED9", 1.0}},
+	{svg.Offcolor{0, "#c3ec52", 1.0}, svg.Offcolor{100, "#0ba29d", 1.0}},
+	{svg.Offcolor{0, "#b1ea4d", 1.0}, svg.Offcolor{100, "#459522", 1.0}},
+	{svg.Offcolor{0, "#DFEC51", 1.0}, svg.Offcolor{100, "#73AA0A", 1.0}},
+	{svg.Offcolor{0, "#E3E3E3", 1.0}, svg.Offcolor{100, "#5D6874", 1.0}},
+	{svg.Offcolor{0, "#CE9FFC", 1.0}, svg.Offcolor{100, "#7367F0", 1.0}},
+}
+
+/*CreateSquare generates square SVG image.
 filename - filename without extension (eg:- "sherlock: for DrSeuss.svg)
 quote - array of string to be made into quote (eg:-
 				["Don't cry because", "it's over,", "smile because", "it happened."])
 author - author name (eg:- "Dr. Seuss")
 */
-func CreateSquare(filename string, quote []string, author string) {
+func CreateSquare(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{
-		{0, "#17ead9", 1.0},
-		{100, "#6078ea", 1.0},
+	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	if len(lgNo) > 0 {
+		lg = []svg.Offcolor{
+			Gradients[lgNo[0]-1].color1,
+			Gradients[lgNo[0]-1].color2,
+		}
 	}
 	// Adding Extension
 	filename += ".svg"
@@ -76,11 +109,14 @@ quote - array of string to be made into quote (eg:-
 				["Don't cry because", "it's over,", "smile because", "it happened."])
 author - author name (eg:- "Dr. Seuss")
 */
-func CreateLand(filename string, quote []string, author string) {
+func CreateLand(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{
-		{0, "#17ead9", 1.0},
-		{100, "#6078ea", 1.0},
+	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	if len(lgNo) > 0 {
+		lg = []svg.Offcolor{
+			Gradients[lgNo[0]-1].color1,
+			Gradients[lgNo[0]-1].color2,
+		}
 	}
 	// Adding Extension
 	filename += ".svg"
@@ -132,11 +168,14 @@ quote - array of string to be made into quote (eg:-
 				["Don't cry because", "it's over,", "smile because", "it happened."])
 author - author name (eg:- "Dr. Seuss")
 */
-func CreatePort(filename string, quote []string, author string) {
+func CreatePort(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{
-		{0, "#17ead9", 1.0},
-		{100, "#6078ea", 1.0},
+	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	if len(lgNo) > 0 {
+		lg = []svg.Offcolor{
+			Gradients[lgNo[0]-1].color1,
+			Gradients[lgNo[0]-1].color2,
+		}
 	}
 	// Adding Extension
 	filename += ".svg"
