@@ -9,5 +9,5 @@ func main() {
 	author := "Oscar Wilde"
 	filename := "1"
 	//Optional argument for gradient color added indexed from 1
-	aurora.CreatePort(filename, quote, author)
+	aurora.CreatePort(filename, quote, author, 20)
 }
