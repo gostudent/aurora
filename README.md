@@ -1,5 +1,8 @@
 # Aurora
 
+![Aurora](https://godoc.org/github.com/gostudent/coindesk?status.svg)
+[![Travis Branch](https://img.shields.io/travis/gostudent/aurora/master.svg)](https://travis-ci.org/gostudent.aurora)
+
 A Package to create quote images
 
 ## Installation
