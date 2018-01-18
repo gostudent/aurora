@@ -5,8 +5,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <linearGradient id="bb" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#17ead9" stop-opacity="1.00"/>
-<stop offset="100%" stop-color="#6078ea" stop-opacity="1.00"/>
+<stop offset="0%" stop-color="#F36265" stop-opacity="1.00"/>
+<stop offset="100%" stop-color="#961276" stop-opacity="1.00"/>
 </linearGradient>
 </defs>
 <rect x="0" y="0" width="1600" height="1200" style="fill: url(#bb)"/>
