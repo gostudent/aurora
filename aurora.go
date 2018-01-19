@@ -50,7 +50,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreateSquare(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Linear Gradient Colors and making lgNo an optional argument
 	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
@@ -110,7 +110,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreateLand(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Linear Gradient Colors and making lgNo an optional argument
 	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
@@ -169,7 +169,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func CreatePort(filename string, quote []string, author string, lgNo ...int) {
-	// Linear Gradient Colors
+	// Linear Gradient Colors and making lgNo an optional argument
 	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
@@ -227,7 +227,7 @@ quote - array of string to be made into quote (eg:-
 author - author name (eg:- "Dr. Seuss")
 */
 func Create(filename string, quote []string, author string, height int, width int, lgNo ...int) {
-	// Linear Gradient Colors
+	// Linear Gradient Colors and making lgNo an optional argument
 	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
