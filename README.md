@@ -2,6 +2,7 @@
 
 ![Aurora](https://img.shields.io/badge/docs-GoDoc-ff69b4.svg?style=flat-square)
 [![Travis Branch](https://img.shields.io/travis/gostudent/aurora/master.svg?style=flat-square)](https://travis-ci.org/gostudent.aurora)
+[![Codacy branch grade](https://img.shields.io/codacy/grade/3cebbd0051d04bce90f0d15f21a092b8/master.svg?style=flat-square)](https://www.codacy.com/app/gostudent/aurora)
 
 A Package to create quote images
 
