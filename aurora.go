@@ -17,7 +17,7 @@ type gradient struct {
 	color2 svg.Offcolor
 }
 
-var Gradients = []gradient{
+var gradients = []gradient{
 	{svg.Offcolor{0, "#fcdf8a", 1.0}, svg.Offcolor{100, "#F38381", 1.0}},
 	{svg.Offcolor{0, "#f54ea2", 1.0}, svg.Offcolor{100, "#FF7676", 1.0}},
 	{svg.Offcolor{0, "#17ead9", 1.0}, svg.Offcolor{100, "#6078EA", 1.0}},
@@ -51,11 +51,11 @@ author - author name (eg:- "Dr. Seuss")
 */
 func CreateSquare(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
-			Gradients[lgNo[0]-1].color1,
-			Gradients[lgNo[0]-1].color2,
+			gradients[lgNo[0]-1].color1,
+			gradients[lgNo[0]-1].color2,
 		}
 	}
 	// Adding Extension
@@ -111,11 +111,11 @@ author - author name (eg:- "Dr. Seuss")
 */
 func CreateLand(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
-			Gradients[lgNo[0]-1].color1,
-			Gradients[lgNo[0]-1].color2,
+			gradients[lgNo[0]-1].color1,
+			gradients[lgNo[0]-1].color2,
 		}
 	}
 	// Adding Extension
@@ -170,11 +170,11 @@ author - author name (eg:- "Dr. Seuss")
 */
 func CreatePort(filename string, quote []string, author string, lgNo ...int) {
 	// Linear Gradient Colors
-	lg := []svg.Offcolor{Gradients[0].color1, Gradients[0].color2}
+	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
 	if len(lgNo) > 0 {
 		lg = []svg.Offcolor{
-			Gradients[lgNo[0]-1].color1,
-			Gradients[lgNo[0]-1].color2,
+			gradients[lgNo[0]-1].color1,
+			gradients[lgNo[0]-1].color2,
 		}
 	}
 	// Adding Extension
@@ -207,6 +207,62 @@ func CreatePort(filename string, quote []string, author string, lgNo ...int) {
 	// Height and Width
 	width := 1200
 	height := 1600
+	// Drawing Starts
+	canvas := svg.New(svgFile)
+	canvas.Start(width, height)
+	canvas.Def()
+	canvas.LinearGradient("bb", 0, 0, 100, 100, lg)
+	canvas.DefEnd()
+	canvas.Rect(0, 0, width, height, "fill: url(#bb)")
+	canvas.Textlines(width/2, (height/2)-qSpace, quote, 72, 75, "white", "middle")
+	canvas.Text(width/2, (height/2)+aSpace, author, aStyle)
+	canvas.End()
+	svgFile.Close()
+}
+
+/*Create generates square SVG image of specific height and width.
+filename - filename without extension (eg:- "sherlock: for DrSeuss.svg)
+quote - array of string to be made into quote (eg:-
+				["Don't cry because", "it's over,", "smile because", "it happened."])
+author - author name (eg:- "Dr. Seuss")
+*/
+func Create(filename string, quote []string, author string, height int, width int, lgNo ...int) {
+	// Linear Gradient Colors
+	lg := []svg.Offcolor{gradients[0].color1, gradients[0].color2}
+	if len(lgNo) > 0 {
+		lg = []svg.Offcolor{
+			gradients[lgNo[0]-1].color1,
+			gradients[lgNo[0]-1].color2,
+		}
+	}
+	// Adding Extension
+	filename += ".svg"
+	// Creating File
+	svgFile, err := os.Create(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// Adding Blockquotes to Quote Text
+	quote[0] = "\"" + quote[0]
+	quote[len(quote)-1] = quote[len(quote)-1] + "\""
+	// Finding Pixel Spacing
+	n := len(quote)
+	var qSpace int
+	//To make quote block vertically centered
+	if n%2 != 0 {
+		qSpace = int((float64(n) / float64(2))) * 75
+	} else {
+		qSpace = int((float64(n)/float64(2))-1) * 75
+	}
+	var aSpace int
+	//To make Author appear just below quote block vertically centered
+	if n%2 != 0 {
+		aSpace = int((float64(n)/float64(2))+1) * 75
+	} else {
+		aSpace = int((float64(n)/float64(2))+1) * 75
+	}
+	// aSpace := int(math.Max(float64((n-3)*150), 150))
+	aStyle := "text-anchor:middle;font-size:54px;fill:white;font-style:italic;"
 	// Drawing Starts
 	canvas := svg.New(svgFile)
 	canvas.Start(width, height)
