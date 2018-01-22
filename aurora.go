@@ -171,7 +171,7 @@ func CreatePort(filename string, quote []string, author string, linearGrad []Col
 	var lg = []svg.Offcolor{}
 	for i := 0; i < len(linearGrad); i++ {
 		lg = append(lg, svg.Offcolor(linearGrad[i]))
-	}
+  }
 	// Adding Extension
 	filename += ".svg"
 	// Creating File

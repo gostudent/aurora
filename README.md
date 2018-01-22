@@ -1,6 +1,9 @@
 # Aurora
 
-![Aurora](https://img.shields.io/badge/docs-GoDoc-ff69b4.svg?style=flat-square)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gostudent/aurora?style=flat-square)](https://goreportcard.com/report/github.com/gostudent/aurora)
+[![OpenCode](https://img.shields.io/badge/Open-Code-ff6a00.svg?style=flat-square)](https://opencode18.github.io)
+[![Codacy branch grade](https://img.shields.io/codacy/grade/3cebbd0051d04bce90f0d15f21a092b8/master.svg?style=flat-square)](https://www.codacy.com/app/gostudent/aurora)
+[![Aurora](https://img.shields.io/badge/docs-GoDoc-ff69b4.svg?style=flat-square)](https://godoc.org/github.com/gostudent/aurora)
 [![Travis Branch](https://img.shields.io/travis/gostudent/aurora/master.svg?style=flat-square)](https://travis-ci.org/gostudent.aurora)
 
 A Package to create quote images
