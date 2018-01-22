@@ -9,5 +9,6 @@ func main() {
 		"loved for what", "what you are not."}
 	author := "André Gide"
 	filename := "2"
-	aurora.CreateSquare(filename, quote, author)
+	lg := []aurora.Color{{0, "#65799b", 1.0}, {25, "#5e2563", 1.0}, {75, "#66666", 1.0}, {100, "#fafafa", 1.0}}
+	aurora.CreateSquare(filename, quote, author, lg)
 }
