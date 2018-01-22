@@ -9,5 +9,6 @@ func main() {
 		"loved for what", "what you are not."}
 	author := "André Gide"
 	filename := "2"
-	aurora.Create(filename, quote, author, 1000, 2000, 1)
+	lg := aurora.Gradients[7].Colors
+	aurora.Create(filename, quote, author, 1000, 2000, lg)
 }
