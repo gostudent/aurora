@@ -98,3 +98,36 @@ func main() {
 ```
 
 <img src="examples/specific/2.svg" alt="Smiley face" height="200" width="400">
+
+## Terminal App 
+### How To
+
+ Main functionality of the application will be shown here.<br />
+ Make sure you are in correct folder.
+ 
+ To see the help, run: 
+
+```bash
+aurora -h
+```
+
+### Options
+```bash
+   --quote value, -q value        quote that will go in the image (default: "Default quote template.")
+   --author value, -a value       Author of the quote (default: "Anonymous")
+   --filename value, -f value     name of the file (default: "quote")
+   --orientation value, -o value  Orientation. 0 - Square (600 X 600) , 1 - Landscape  and  2 - Portrait (default: "0")
+   --gradient value, -g value     Gradient : 0-22 integer input. (default: "0")
+   --help, -h                     show help
+   --version, -v                  print the version
+
+```
+### Example Command
+
+```bash
+aurora -q "Every Man has in Himself the Most Dangerous Traitor of All." -a "Soren Kierkegaard" -f "example1" -o 1 -g 9
+
+```
+<img src="term/example1.svg" alt="Example quote" height="240" width="320">
+
+
