@@ -1,0 +1,1 @@
+aurora -q "Every Man has in Himself the Most Dangerous Traitor of All." -a "Soren Kierkegaard" -f "example1" -o 1 -g 9
