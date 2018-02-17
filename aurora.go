@@ -160,7 +160,7 @@ func CreateLand(filename string, quote []string, author string, linearGrad []Col
 }
 
 /*
-CreateLand generates a portrait SVG image.
+CreatePort generates a portrait SVG image.
 filename - filename without extension (eg:- "sherlock: for DrSeuss.svg)
 quote - array of string to be made into quote (eg:-
 				["Don't cry because", "it's over,", "smile because", "it happened."])
@@ -171,7 +171,7 @@ func CreatePort(filename string, quote []string, author string, linearGrad []Col
 	var lg = []svg.Offcolor{}
 	for i := 0; i < len(linearGrad); i++ {
 		lg = append(lg, svg.Offcolor(linearGrad[i]))
-  }
+	}
 	// Adding Extension
 	filename += ".svg"
 	// Creating File
